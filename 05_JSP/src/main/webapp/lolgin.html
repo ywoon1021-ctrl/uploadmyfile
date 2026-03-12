@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+/* 전체 화면 가운데 정렬 */
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f2f4f7;
+    font-family: Arial, sans-serif;
+}
+
+/* 로그인 박스 */
+form > div{
+    background:white;
+    padding:30px 40px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    width:260px;
+}
+
+/* ID / PW 줄 */
+form > div > div{
+    margin-bottom:15px;
+    font-size:14px;
+}
+
+/* input */
+input{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    box-sizing:border-box;
+}
+
+/* 버튼 */
+button{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    background:#4a90e2;
+    color:white;
+    font-size:14px;
+    cursor:pointer;
+}
+
+/* hover */
+button:hover{
+    background:#357bd8;
+}
+</style>
+
+
+</head>
+<body>
+
+	<form action="login_output.jsp" method="post">
+		<div>
+
+
+			<div>ID : <input type= "text" name = "id"></div>
+			<div>PW : <input type= "text" name = "pw"></div>
+			<div>
+				<button type="submit">login</button>
+			</div>
+
+		</div>
+
+	</form>
+</body>
+</html>

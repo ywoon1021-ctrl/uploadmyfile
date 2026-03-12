@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f2f4f7;
+    font-family: Arial, sans-serif;
+}
+
+div{
+    background:white;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    width:300px;
+    text-align:center;
+}
+
+h1{
+    margin-bottom:30px;
+}
+
+h3{
+    text-align:left;
+    font-weight:normal;
+}
+
+input{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    box-sizing:border-box;
+}
+
+input:focus{
+    outline:none;
+    border-color:#4CAF50;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    border:none;
+    background:#4CAF50;
+    color:white;
+    font-size:16px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#45a049;
+}
+</style>
+</head>
+<body>
+
+<form action="bmi.jsp" method="post" enctype="multipart/form-data">
+<div>
+<h1>BMI 검사</h1>
+<h3>
+이름 <input name="name" placeholder="필수 2글자 이상"
+required
+minlength="2">
+</h3>
+<h3>
+키 cm 
+<input name= "length" placeholder="3글자 이상" 
+type="number"
+required
+step="0.1"
+title="숫자만 입력하세요">
+
+
+
+
+</h3>
+<h3>체중 kg <input name ="weight" placeholder="숫자만"
+type="number"
+required
+step="0.1"
+title="숫자만 입력하세요">
+</h3>
+
+<h3 class = "items"> 
+사진
+ <input type="file" name ="imgFile">
+</h3>
+
+
+
+<button onclick="bmi.jsp"type="submit"> 계산</button>
+
+</div>
+
+
+</form>
+
+</body>
+</html>

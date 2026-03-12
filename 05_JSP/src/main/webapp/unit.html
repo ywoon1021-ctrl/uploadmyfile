@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<style>
+div {
+	margin: 0;
+	height: 45vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #f2f4f7;
+}
+</style>
+<body>
+	<div>
+		<form action="unit.jsp" onsubmit="return checkNumber()" method="post">
+			<h1>단위변환</h1>
+			변환할값 <input name="input" id="inputValue" placeholder="숫자를 입력하세요">
+			단위 <select name="selc">
+				<option value="length">cm -> inch</option>
+				<option value="area">㎡ -> 평</option>
+				<option value="temperature">°C ->°F</option>
+				<option value="speed">km/h -> mi/h</option>
+			</select>
+			<button type="submit">결과 보기</button>
+	</div>
+
+	</form>
+
+
+</body>
+<script>
+	function checkNumber() {
+		//
+		const numE1 = document.querySelector("#inputValue");
+		let value = document.getElementById("inputValue").value;
+
+		if (value.trim() === "" || isNaN(value)) {
+			alert("숫자만 입력해주세요.");
+			return false;
+		}
+		return true;
+	}
+</script>
+
+</html>

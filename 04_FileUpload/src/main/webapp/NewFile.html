@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<!-- 
+	프로젝트 -> 빌드패스 -> lib(탭)
+
+	web(프로젝트 ) -> web-inf -> lib
+	cos.jar
+
+	파일 업로드 하는 경우 html 에서 신경쓸것 2개
+	1. post 요청으로
+	2. enctype(포장방식)을 multipart/form-data (박스 포장)으로
+
+
+ -- get 요청에서는 파일 업로드가 어려움 => url에서 파라미터를 넘기므로 get 요청 url 길이에 한계가 존재(꽤 크긴함)
+ -- 이미지 영상은 url에 넣으면 길기도 하고 구조적으로 들고가기 빡셈 => 포장 방식을 바꿔야함
+ -- >> 2번 내용 비닐봉투를 포장 박스로 바꿔줌
+ -->
+
+	<form action="FileUpload" method="post" enctype="multipart/form-data">
+		이름 : <input name="name"> 
+		사진 : <input name="pic" type="file"> 
+		기타 : <input name="etc" type="file">
+		<button>upload!</button>
+
+
+	</form>
+
+
+
+
+</body>
+</html>
